@@ -20,7 +20,7 @@ describe('getElementsByClassName', function() {
       var expectedNodeList = document.getElementsByClassName('targetClassName');
       var expectedArray = Array.prototype.slice.apply(expectedNodeList);
       var equality = _.isEqual(result, expectedArray); // why can't we use `===` here?
-      expect(equality).to.equal(FILL_ME_IN);
+      expect(equality).to.equal(expectedArray);
 
       $rootElement.remove();
     });
@@ -28,3 +28,13 @@ describe('getElementsByClassName', function() {
   });
 
 });
+
+
+// if (accumulator === undefined) {
+//       accumulator = collection[0];
+//       collection = collection.slice(1);
+//     }
+//     each(collection, function(element, i) {
+//       accumulator = iterator(accumulator, element, i);
+//     });
+//     return accumulator;
